@@ -1,0 +1,17 @@
+<p-table [value]="position">
+    <ng-template pTemplate="header">
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Salary</th>
+            <th>Description</th>
+        </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-position>
+        <tr>
+            <td>{{position.id}}</td>
+            <td>{{position.name}}</td>
+            <td>{{position.salary}}</td>
+            <td>{{position.description}}</td>
+        </tr>
+    </ng-template>
