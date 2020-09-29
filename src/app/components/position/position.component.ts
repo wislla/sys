@@ -10,6 +10,8 @@ import {Position} from '../../classes/position';
 export class PositionComponent implements OnInit {
 
   position: Position[]; 
+  selectedPosition1: Position;
+  desabititados:boolean = true;
 
   constructor(private positionService: PositionService) { }
 
@@ -17,5 +19,13 @@ export class PositionComponent implements OnInit {
     this.position = this.positionService.getPosition();
     console.log(this.position)
   }
+
+  onRowSelect(event) {
+    this.desabititados = false;
+}
+
+onRowUnselect(event) {
+  this.desabititados = true;
+}
 
 }

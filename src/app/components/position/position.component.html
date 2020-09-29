@@ -1,17 +1,30 @@
-<p-table [value]="position">
+<p-table [value]="position" selectionMode="single" 
+[(selection)]="selectedPosition1" dataKey="id"
+(onRowSelect)="onRowSelect($event)" (onRowUnselect)="onRowUnselect($event)"
+>
+    <ng-template pTemplate="caption">
+        <div class="p-d-flex p-center p-jc-center">
+
+            <p-button icon="pi pi-plus" [disabled]= "desabititados"></p-button>
+            <p-button icon="pi pi-search"></p-button>
+            
+            <p-button icon="pi pi-trash " [disabled]= "desabititados"></p-button>
+        </div>
+    </ng-template>
     <ng-template pTemplate="header">
-        <tr>
+        <tr >
             <th>Id</th>
             <th>Name</th>
             <th>Salary</th>
             <th>Description</th>
         </tr>
     </ng-template>
-    <ng-template pTemplate="body" let-position>
-        <tr>
+    <ng-template pTemplate="body" let-position >
+        <tr [pSelectableRow]="position">
             <td>{{position.id}}</td>
             <td>{{position.name}}</td>
             <td>{{position.salary}}</td>
             <td>{{position.description}}</td>
         </tr>
     </ng-template>
+
