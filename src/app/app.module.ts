@@ -11,11 +11,13 @@ import {MenuItem} from 'primeng/api';
 import {ToolbarModule} from 'primeng/toolbar';
 import { PositionComponent } from './components/position/position.component';
 import {TableModule} from 'primeng/table';
+import { TesteComponent } from './components/teste/teste.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    PositionComponent
+    PositionComponent,
+    TesteComponent
   ],
   imports: [
     BrowserAnimationsModule,

@@ -14,7 +14,15 @@
     <div class="p-col-2">
         <p-accordion>
             <p-accordionTab header="Cadastro">
-               Content 1
+                <ul>
+                    <li><a href=""></a></li>
+                    <li><a href="">das</a></li>
+                    <li> <a href="">das</a></li>
+                </ul>
+              
+              
+             
+              
             </p-accordionTab>
             <p-accordionTab header="Financeiro">
                 Content 2
@@ -25,7 +33,8 @@
         </p-accordion>
     </div>
     <div class="p-col-10">
-        <app-position></app-position>
+        <router-outlet></router-outlet>
+       <!-- <app-position></app-position>-->
     </div>
      <!--linha 3 -->
      <div class="p-col-2">
@@ -42,4 +51,3 @@
         </p-toolbar>
     </div>
 </div>
-<router-outlet></router-outlet>
