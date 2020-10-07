@@ -5,8 +5,8 @@ import { TesteComponent } from './components/teste/teste.component';
 
 const routes: Routes = [
  
-    { path: 'first-component', component: PositionComponent },
-    { path: 'second-component', component: TesteComponent },
+    { path: 'position', component: PositionComponent },
+    { path: 'teste', component: TesteComponent },
    // { path: '**', component: PageNotFoundComponent },  // Wildcard route for a 404 page
   ];
 
